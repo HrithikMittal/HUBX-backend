@@ -1,12 +1,12 @@
 {
   "name": "hubx",
   "version": "1.0.0",
-  "description": "",
+  "description": "an intern application task",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "author": "",
+  "author": "adhikansh mittal",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -20,3 +20,4 @@
     "underscore": "^1.10.2"
   }
 }
+r
