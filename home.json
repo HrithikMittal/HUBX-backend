@@ -1,0 +1,12 @@
+{
+  "/event/allevents": "GET - Get all the events",
+  "/event/tags": "GET - GET all the event on the basis of tags",
+  "event/newevent/:userId": "POST - Create new event - require Authentication and Authorization",
+  "event/editevent/:eventId": "PUT - Edit the event - require Authentication and Authorization",
+  "event/deleteevent/:eventId": "DELETE - Delete the event - require Authentication and Authorization",
+
+  "/user/signup": "POST - Signup the User",
+  "/user/signin": "POST - Signin the User",
+  "/user/edituser/:userId": "PUT - Edit the User - require Authentication and Authorization",
+  "/user/deluser/:userId": "DELETE - Delete the User - require Authentication and Authorization"
+}
