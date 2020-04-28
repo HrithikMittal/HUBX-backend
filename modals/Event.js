@@ -27,4 +27,4 @@ var eventSchema = new mongoose.Schema({
     type: Date,
   },
 });
-module.exports = Post = mongoose.model("Post", eventSchema);
+module.exports = Event = mongoose.model("Event", eventSchema);
