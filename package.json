@@ -4,7 +4,8 @@
   "description": "an intern application task",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "node index.js"
   },
   "author": "adhikansh mittal",
   "license": "ISC",
