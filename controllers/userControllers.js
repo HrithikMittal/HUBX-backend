@@ -12,7 +12,7 @@ const signup = (req, res) => {
 
   User.findOne({ email: req.body.email })
     .then((response) => {
-      if (response) res.send("Already registered...");
+      if (response) res.json({error:"Already registered..."});
       newUser
         .save()
         .then((user) => {
@@ -30,7 +30,7 @@ const signup = (req, res) => {
 const signin = (req, res) => {
   User.findOne({ email: req.body.email })
     .then((user) => {
-      if (!user) return res.status(404).send("Not Found");
+      if (!user) return res.status(404).send({error:"Not Found"});
 
       user.password = undefined;
 
