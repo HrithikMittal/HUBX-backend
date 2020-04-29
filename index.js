@@ -33,7 +33,7 @@ app.use(cookieParser());
 app.use("/user", user);
 app.use("/event", event);
 
-var port = process.env.port || 8800;
+var port = process.env.PORT || 8800;
 app.listen(port, () => {
   console.log(`Server is listening on PORT:${port}`);
 });
