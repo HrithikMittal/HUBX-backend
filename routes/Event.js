@@ -9,10 +9,12 @@ router.get("/tags", eventController.getEventByTag);
 
 router.get(
   "/allevent/:userId",
+  userController.requireSingin,
   eventController.getEventById
 );
 router.post(
   "/newevent/:userId",
+  userController.requireSingin,
   eventController.newEvent
 );
 router.put(
