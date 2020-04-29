@@ -7,6 +7,9 @@
     "start": "node index.js",
     "test": "node index.js"
   },
+  "engines": {
+    "node": ">=8.0.0 <11.0.0"
+  },
   "author": "adhikansh mittal",
   "license": "ISC",
   "dependencies": {
