@@ -7,6 +7,7 @@ const cors = require("cors");
 var app = express();
 dotenv.config();
 
+app.use(cors());
 var user = require("./routes/User");
 var event = require("./routes/Event");
 
@@ -23,7 +24,6 @@ mongoose
   });
 
 
-app.use(cors());
 const data = require("./home.json");
 app.get("/", (req, res) => {
   res.json(data);
