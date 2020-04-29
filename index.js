@@ -31,6 +31,7 @@ app.use(cookieParser());
 app.use("/user", user);
 app.use("/event", event);
 
-app.listen(process.env.port, () => {
-  console.log(`Server is listening on PORT:${process.env.port}`);
+var port = process.env.port;
+app.listen(port, () => {
+  console.log(`Server is listening on PORT:${port}`);
 });
