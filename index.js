@@ -27,9 +27,9 @@ app.get("/", (req, res) => {
   res.json(data);
 });
 
-app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(cors());
 app.use("/user", user);
 app.use("/event", event);
 
