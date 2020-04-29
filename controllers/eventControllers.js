@@ -14,7 +14,8 @@ const getAllEvents = (req, res) => {
 
 const newEvent = (req, res) => {
   var newEvent = new Event(req.body);
-  newEvent.tags = req.body.tags.split(",");
+  if(req.body.tags)
+    newEvent.tags = req.body.tags.split(",");
   newEvent.eventedBy = req.profile;
   newEvent.createdDate = Date.now();
   console.log(newEvent);
