@@ -30,6 +30,7 @@ app.get("/", (req, res) => {
 });
 
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json())
 app.use(cookieParser());
 app.use("/user", user);
 app.use("/event", event);
