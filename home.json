@@ -4,6 +4,7 @@
   "event/newevent/:userId": "POST - Create new event - require Authentication and Authorization",
   "event/editevent/:eventId": "PUT - Edit the event - require Authentication and Authorization",
   "event/deleteevent/:eventId": "DELETE - Delete the event - require Authentication and Authorization",
+  "event/allevent/:userId": "GET - GET all the event on the basis of User Id",
 
   "/user/signup": "POST - Signup the User",
   "/user/signin": "POST - Signin the User",

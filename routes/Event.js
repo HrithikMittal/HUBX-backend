@@ -6,6 +6,12 @@ var userController = require("../controllers/userControllers");
 
 router.get("/allevents", eventController.getAllEvents);
 router.get("/tags", eventController.getEventByTag);
+
+router.get(
+  "/allevent/:userId",
+  userController.requireSingin,
+  eventController.getEventById
+);
 router.post(
   "/newevent/:userId",
   userController.requireSingin,

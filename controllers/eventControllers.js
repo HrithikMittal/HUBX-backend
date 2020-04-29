@@ -59,10 +59,6 @@ const deleteEvent = (req, res) => {
 };
 
 const isEventer = (req, res, next) => {
-  console.log(req.event.eventById);
-  console.log("===============");
-  console.log(req.auth);
-  console.log("===============");
   let isEventer =
     req.event && req.auth && req.event.eventedBy._id == req.auth._id;
   if (!isEventer) {
@@ -83,6 +79,21 @@ const eventById = (req, res, next, id) => {
     req.event = event; // adds event object in req with event info
     next();
   });
+};
+
+const getEventById = (req, res) => {
+  var eventedBy = { _id: null };
+  eventedBy._id = req.profile._id;
+  var obj = {
+    eventedBy,
+  };
+  Event.find(obj)
+    .then((events) => {
+      res.json({ events: events });
+    })
+    .catch((err) => {
+      console.log("Error is ", err.message);
+    });
 };
 
 const getEventByTag = async (req, res) => {
@@ -111,4 +122,5 @@ module.exports = {
   eventById,
   isEventer,
   getEventByTag,
+  getEventById,
 };
