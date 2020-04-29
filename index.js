@@ -22,6 +22,8 @@ mongoose
     console.log("Error is ", err.message);
   });
 
+
+app.use(cors());
 const data = require("./home.json");
 app.get("/", (req, res) => {
   res.json(data);
@@ -29,7 +31,6 @@ app.get("/", (req, res) => {
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(cors());
 app.use("/user", user);
 app.use("/event", event);
 
