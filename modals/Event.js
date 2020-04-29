@@ -12,7 +12,7 @@ var eventSchema = new mongoose.Schema({
   },
   tags: {
     type: Array,
-    required: true,
+//     required: true,
   },
   eventedBy: {
     type: ObjectId,
